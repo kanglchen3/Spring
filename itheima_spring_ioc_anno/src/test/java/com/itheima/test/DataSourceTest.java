@@ -84,7 +84,7 @@ public class DataSourceTest {
         String driverName="com.mysql.cj.jdbc.Driver";//这是要连接的数据库加载器
         String dbURL="jdbc:mysql://localhost:3306/test";//这是要连接的端口号以及数据库名称
         String userName="root";//用户名
-        String userpwd="kangle";//用户密码
+        String userpwd="root";//用户密码
         try {
             Class.forName(driverName);
             System.out.println("加载驱动成功");
