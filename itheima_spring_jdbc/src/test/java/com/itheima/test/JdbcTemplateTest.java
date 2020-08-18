@@ -2,6 +2,8 @@ package com.itheima.test;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.beans.PropertyVetoException;
@@ -27,4 +29,13 @@ public class JdbcTemplateTest {
         int row = jdbcTemplate.update("insert into account values (?,?)", "Tom", 5000);
         System.out.println(row);
     };
+
+    @Test
+    //测试spring产生jdbc模板对象
+    public void test2() throws PropertyVetoException {
+        ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
+        JdbcTemplate jdbcTemplate = app.getBean(JdbcTemplate.class);
+        int row = jdbcTemplate.update("insert into account values(?,?)","tom",500);
+        System.out.println(row);
+    }
 }
