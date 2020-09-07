@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.itheima.test.JdbcTemplateTest" time="0.001" errors="0" skipped="2">
+<testsuite tests="5" failures="0" name="com.itheima.test.jdbcTemplateCRUDTest" time="4.472" errors="0" skipped="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.1+7"/>
@@ -60,10 +60,22 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.itheima.test.JdbcTemplateTest" name="test1" time="0">
+  <testcase classname="com.itheima.test.jdbcTemplateCRUDTest" name="testQuerySingle" time="0.296">
+    <skipped/>
+    <system-err>9�� 07, 2020 11:24:38 ���� org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+��Ϣ: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+9�� 07, 2020 11:24:38 ���� org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+��Ϣ: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2f490758, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@101df177, org.springframework.test.context.support.DirtiesContextTestExecutionListener@166fa74d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@40f08448, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@276438c9, org.springframework.test.context.event.EventPublishingTestExecutionListener@588df31b]
+</system-err>
+  </testcase>
+  <testcase classname="com.itheima.test.jdbcTemplateCRUDTest" name="testQueryCount" time="1.044"/>
+  <testcase classname="com.itheima.test.jdbcTemplateCRUDTest" name="testQueryAll" time="1.044">
     <skipped/>
   </testcase>
-  <testcase classname="com.itheima.test.JdbcTemplateTest" name="test2" time="0.001">
+  <testcase classname="com.itheima.test.jdbcTemplateCRUDTest" name="testDelete" time="1.044">
+    <skipped/>
+  </testcase>
+  <testcase classname="com.itheima.test.jdbcTemplateCRUDTest" name="testUpdate" time="1.044">
     <skipped/>
   </testcase>
 </testsuite>
