@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/itheima_spring_ioc_anno" />
     <file type="web" url="file://$PROJECT_DIR$/itheima_spring_jdbc" />
+    <file type="web" url="file://$PROJECT_DIR$/itheima_spring_tx" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />

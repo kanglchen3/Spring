@@ -18,7 +18,7 @@
       <module name="itheima_spring_ioc" target="14" />
       <module name="itheima_spring_ioc_anno" target="14" />
       <module name="itheima_spring_jdbc" target="14" />
-      <module name="itheima_spring_tx" target="1.5" />
+      <module name="itheima_spring_tx" target="14" />
     </bytecodeTargetLevel>
   </component>
 </project>
