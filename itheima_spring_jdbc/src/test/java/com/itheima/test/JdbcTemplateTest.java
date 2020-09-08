@@ -12,7 +12,7 @@ import java.beans.PropertyVetoException;
 public class JdbcTemplateTest {
 
     @Test
-    @Ignore
+//    @Ignore
     //测试jdbcTemplate开发步骤
     public void test1() throws PropertyVetoException {
         //创建数据源对象
@@ -33,7 +33,7 @@ public class JdbcTemplateTest {
     };
 
     @Test
-    @Ignore
+//    @Ignore
     //测试spring产生jdbc模板对象
     public void test2() throws PropertyVetoException {
         ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");
