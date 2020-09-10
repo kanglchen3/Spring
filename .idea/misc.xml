@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/itheima_spring_ioc_anno" />
     <file type="web" url="file://$PROJECT_DIR$/itheima_spring_jdbc" />
+    <file type="web" url="file://$PROJECT_DIR$/itheima_spring_mvc" />
     <file type="web" url="file://$PROJECT_DIR$/itheima_spring_tx" />
   </component>
   <component name="JavaScriptSettings">
@@ -17,6 +18,8 @@
         <option value="$PROJECT_DIR$/itheima.spring.jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/itheima_spring_jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/itheima_spring_tx/pom.xml" />
+        <option value="$PROJECT_DIR$/itheima_spring_tx_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/itheima_spring_mvc/pom.xml" />
       </list>
     </option>
   </component>
