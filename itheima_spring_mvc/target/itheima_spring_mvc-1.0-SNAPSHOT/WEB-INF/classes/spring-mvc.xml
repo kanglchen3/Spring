@@ -6,5 +6,12 @@
                             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!--    controller的组件扫描-->
-    <context:component-scan base-package="com.kangle.controller"/>
+    <context:component-scan base-package="com.kangle">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--        redirect:/success.jsp-->
+        <property name="prefix" value="redirect:/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>
