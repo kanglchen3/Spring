@@ -5,6 +5,7 @@ import com.kangle.domain.User;
 import com.kangle.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -123,8 +125,15 @@ public class UserController {
 
     @RequestMapping("/tt14")
     @ResponseBody
-    //如果返回的是集合，则必须封装到一个POJO中返回
+    //如果请求的参数的是集合，则要封装到一个POJO中返回
     public void save14(VO vo) throws IOException {
         System.out.println(vo);
+    }
+
+    @RequestMapping("/tt15")
+    @ResponseBody
+    //如果请求的参数的是集合，也可以通过@RequestBody 直接将集合入参
+    public void save15(@RequestBody List<User> userList) throws IOException {
+        System.out.println(userList);
     }
 }

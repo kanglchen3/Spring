@@ -5,18 +5,18 @@ import java.util.List;
 public class VO {
     private List<User> userList;
 
-    public List<User> getVo() {
+    public List<User> getUserList() {
         return userList;
     }
 
-    public void setVo(List<User> vo) {
-        this.userList = vo;
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 
     @Override
     public String toString() {
         return "VO{" +
-                "vo=" + userList +
+                "userList=" + userList +
                 '}';
     }
 }

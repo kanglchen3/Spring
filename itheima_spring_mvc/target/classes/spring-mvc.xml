@@ -25,4 +25,9 @@
 <!--        </property>-->
 <!--    </bean>-->
     <mvc:annotation-driven/>
+
+<!--    开放资源的访问，  会把访问 /js/** 的路径都导到 /js/ 这个地址去-->
+<!--    <mvc:resources mapping="/js/**" location="/js/"/>-->
+<!-- ！！！！ 但是 有一个更好用的方法，就是在dispatcherServlet的mapping都没找到对的上号的时候，把请求交还给原有的服务器，在这里就是还给tomcat-->
+<!--    <mvc:default-servlet-handler/>-->
 </beans>
