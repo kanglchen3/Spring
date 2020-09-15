@@ -12,5 +12,6 @@
 </head>
 <body>
     <h1>Success!</h1>
+    <h2>${username}</h2>
 </body>
 </html>

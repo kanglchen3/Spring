@@ -28,17 +28,12 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.10" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.10" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.10" />
           <element id="library" level="project" name="Maven: c3p0:c3p0:0.9.1.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.21" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
-          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter:5.7.0" />
-          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.0" />
-          <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.0" />
-          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
-          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.7.0" />
-          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-params:5.7.0" />
-          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.0" />
-          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-engine:1.7.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
