@@ -5,16 +5,16 @@ import com.kangle.domain.User;
 import com.kangle.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -135,5 +135,40 @@ public class UserController {
     //如果请求的参数的是集合，也可以通过@RequestBody 直接将集合入参
     public void save15(@RequestBody List<User> userList) throws IOException {
         System.out.println(userList);
+    }
+
+    @RequestMapping("/tt18")
+    @ResponseBody
+//    通过自定义的转换器converter转换我们自定义的日期格式 2020-12-01
+    public void save18(Date date) throws IOException{
+        System.out.println(date);
+    }
+
+    @RequestMapping("/tt19")
+    @ResponseBody
+//    获得servlet相关api。其实就是request和response
+    public void save19(HttpServletRequest req, HttpServletResponse res, HttpSession session) throws IOException{
+        System.out.println(req);
+//        HttpSession session = req.getSession(); //也可以这么拿
+        System.out.println(session);
+        ServletContext servletContext = session.getServletContext();
+        System.out.println(servletContext.getAttributeNames());
+        System.out.println(servletContext);
+        System.out.println(res);
+    }
+
+    @RequestMapping("/tt20")
+    @ResponseBody
+//    使用requestHeader可以获得请求头信息，相当于web中的req.getHeader(name), 参数有两个，value，required
+//    method, content-type, accept-language， user-agent都是请求头的attribute
+    public void save20(@RequestHeader(value = "User-Agent", required = false) String headerValue){
+        System.out.println(headerValue);
+    }
+
+    @RequestMapping("/tt21")
+    @ResponseBody
+//    @CookieValue 虽然说cookie也是一种请求头，但是因为比较特殊，cookie内部还有不同的value，所以有个注解可以直接拿某个value的cookie，参数也是value，required
+    public void save21(@CookieValue(value = "JSESSIONID", required = false) String jsessionId){
+        System.out.println(jsessionId);
     }
 }
