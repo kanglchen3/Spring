@@ -137,6 +137,23 @@ public class UserController {
         System.out.println(userList);
     }
 
+    @RequestMapping("/tt16")
+    @ResponseBody
+    //RequestParam 主要的三个参数
+//    value： 与请求参数名称匹配
+//    required： 请求里是否必须要包括此参数，不满足会报错，默认是true
+//    defaultValue：没有指定参数时有个默认赋值
+    public void save16(@RequestParam(value = "name", required = false, defaultValue = "itcast") String username) throws IOException {
+        System.out.println(username);
+    }
+
+    // @Path
+    @RequestMapping("/tt17/{zhanweifu}")
+    @ResponseBody
+    public void save17(@PathVariable(value = "zhanweifu", required = false) String username) throws  IOException{
+        System.out.println(username);
+    }
+
     @RequestMapping("/tt18")
     @ResponseBody
 //    通过自定义的转换器converter转换我们自定义的日期格式 2020-12-01
@@ -161,14 +178,14 @@ public class UserController {
     @ResponseBody
 //    使用requestHeader可以获得请求头信息，相当于web中的req.getHeader(name), 参数有两个，value，required
 //    method, content-type, accept-language， user-agent都是请求头的attribute
-    public void save20(@RequestHeader(value = "User-Agent", required = false) String headerValue){
+    public void save20(@RequestHeader(value = "User-Agent", required = false) String headerValue) throws IOException{
         System.out.println(headerValue);
     }
 
     @RequestMapping("/tt21")
     @ResponseBody
 //    @CookieValue 虽然说cookie也是一种请求头，但是因为比较特殊，cookie内部还有不同的value，所以有个注解可以直接拿某个value的cookie，参数也是value，required
-    public void save21(@CookieValue(value = "JSESSIONID", required = false) String jsessionId){
+    public void save21(@CookieValue(value = "JSESSIONID", required = false) String jsessionId) {
         System.out.println(jsessionId);
     }
 }
