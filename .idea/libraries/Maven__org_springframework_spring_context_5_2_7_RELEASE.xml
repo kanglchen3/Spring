@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework:spring-context:5.2.7.RELEASE">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.7.Release/spring-context-5.2.7.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.7.RELEASE/spring-context-5.2.7.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.7.RELEASE/spring-context-5.2.7.RELEASE-javadoc.jar!/" />

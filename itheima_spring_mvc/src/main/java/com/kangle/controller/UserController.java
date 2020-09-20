@@ -6,12 +6,14 @@ import com.kangle.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
@@ -187,5 +189,30 @@ public class UserController {
 //    @CookieValue 虽然说cookie也是一种请求头，但是因为比较特殊，cookie内部还有不同的value，所以有个注解可以直接拿某个value的cookie，参数也是value，required
     public void save21(@CookieValue(value = "JSESSIONID", required = false) String jsessionId) {
         System.out.println(jsessionId);
+    }
+
+    @RequestMapping("/tt22")
+    @ResponseBody
+//    这里的username和multipartFile也必须和表单的键值匹配
+    public void save22(String username, MultipartFile filename1, MultipartFile filename2) throws IOException {
+        System.out.println(username);
+        System.out.println(filename1);
+        //拿上传上来的文件原本的文件名
+        String originalFilename1 = filename1.getOriginalFilename();
+        filename1.transferTo(new File("D:\\Download\\" + originalFilename1));
+        String originalFilename2 = filename2.getOriginalFilename();
+        filename2.transferTo(new File("D:\\Download\\" + originalFilename2));
+    }
+
+    @RequestMapping("/tt23")
+    @ResponseBody
+//    这里的username和multipartFile还是必须和表单的键值匹配，不过filename传进来的是一个数组了
+    public void save23(String username, MultipartFile[] filename) throws IOException {
+        System.out.println(username);
+        System.out.println(filename);
+        for (MultipartFile multipartFile : filename) {
+            String originalFilename = multipartFile.getOriginalFilename();
+            multipartFile.transferTo(new File("D:\\Download\\" + originalFilename));
+        }
     }
 }

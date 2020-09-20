@@ -33,6 +33,13 @@
         </property>
     </bean>
 
+<!--    配置文件上传解析器-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="5242800"/>
+        <property name="maxUploadSizePerFile" value="5242800"/>
+    </bean>
+
 <!--    开放资源的访问，  会把访问 /js/** 的路径都导到 /js/ 这个地址去-->
 <!--    <mvc:resources mapping="/js/**" location="/js/"/>-->
 <!-- ！！！！ 但是 有一个更好用的方法，就是在dispatcherServlet的mapping都没找到对的上号的时候，把请求交还给原有的服务器，在这里就是还给tomcat-->
