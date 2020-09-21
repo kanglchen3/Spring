@@ -28,6 +28,7 @@
             <mvc:mapping path="/**"/>
             <bean class="com.kangle.interceptor.MyInterceptor1"/>
         </mvc:interceptor>
+<!--        加了两个拦截器周呢，执行的顺序就是pre 是先1后2， post和after就是反过来先2后1，结构上来讲就是2在下面，包在里面的 -->
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean class="com.kangle.interceptor.MyInterceptor2"/>
